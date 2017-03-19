@@ -1,1 +1,1 @@
-include 'voting-box-service'
+include 'voting-box-service', 'voting-score-service'
