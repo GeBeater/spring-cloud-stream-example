@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.5.2.RELEASE'
+        springBootVersion = '1.5.3.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -27,14 +27,14 @@ repositories {
 
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-web') // not required; already dependency of spring-cloud-stream
     compile('org.springframework.cloud:spring-cloud-starter-stream-rabbit')
-    compileOnly ('org.projectlombok:lombok:1.16.14')
+    compileOnly ('org.projectlombok:lombok:1.16.16')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR6"
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE"
     }
 }
